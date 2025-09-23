@@ -108,6 +108,7 @@
                 class="w-full bg-white hover:bg-zinc-300 text-black font-semibold py-2 px-4 rounded-lg shadow-md transition">
                 Submit
             </button>
+            <p>Already have an account? <a href="/login" class="text-blue-500 hover:underline">Login here</a></p>
         </form>
     </div>
 </div>

@@ -4,11 +4,13 @@
     <div class="bg-zinc-900 flex flex-col px-12 py-16 rounded-lg shadow-lg w-full max-w-md">
 
         <!-- Title with arrow -->
-        <div class="relative flex items-center justify-center mb-8">
-            <span class="material-symbols-outlined absolute left-0 cursor-pointer">
+        <div class="relative flex items-center justify-center mb-12">
+            <!-- Arrow on the left -->
+            <a href="/" class="absolute left-0 cursor-pointer material-symbols-outlined">
                 arrow_back_ios
-            </span>
-            <h1 class="text-4xl font-bold">Login</h1>
+            </a>
+            <!-- Centered title -->
+            <h1 class="text-4xl font-bold ">Login</h1>
         </div>
 
         <!-- Form -->
@@ -26,9 +28,10 @@
             </div>
 
             <button type="submit"
-                class="mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md">
+                class="w-full bg-white hover:bg-zinc-300 text-black font-semibold py-2 px-4 rounded-lg shadow-md transition">
                 Submit
             </button>
+            <p>Already have an account? <a href="/register" class="text-blue-500 hover:underline">Register here</a></p>
         </form>
     </div>
 </div>
