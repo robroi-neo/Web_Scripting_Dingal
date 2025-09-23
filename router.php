@@ -2,7 +2,7 @@
 
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
-$uri = strip($uri);
+dd($uri);
 
 $routes = require 'routes.php';
 
@@ -12,11 +12,6 @@ function routeToController($uri, $routes) {
     } else {
         abort();
     }
-}
-
-function abort($code = 404) {
-    http_response_code($code);
-    die();
 }
 
 routeToController($uri, $routes);
