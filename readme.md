@@ -1,0 +1,1 @@
+A notes mini project to learn php. Built using JS, CSS, AND HTML
