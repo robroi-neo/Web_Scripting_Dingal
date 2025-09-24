@@ -8,5 +8,6 @@
     Register
 </a>
 </div>
+<?= dd($_POST) ?>
 
 <?php require('partials/footer.php') ?>

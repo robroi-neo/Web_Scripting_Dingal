@@ -10,39 +10,39 @@
         <h1 class="text-4xl font-bold ">Register</h1>
     </div>
 
-    <form class="flex flex-col gap-6">
+    <form class="flex flex-col gap-6" method="POST" action="/register">
         <!-- Full Name -->
         <div>
             <label class="block mb-1 font-medium">Full Name</label>
-            <input type="text" placeholder="Enter your full name"
+            <input name="full_name" type="text" placeholder="Enter your full name"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-400">
         </div>
 
         <!-- Email -->
         <div>
             <label class="block mb-1 font-medium">Email Address</label>
-            <input type="email" placeholder="Enter your email"
+            <input name="email" type="email" placeholder="Enter your email"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-400">
         </div>
 
         <!-- Username -->
         <div>
             <label class="block mb-1 font-medium">Username</label>
-            <input type="text" placeholder="Choose a username"
+            <input name="username" type="text" placeholder="Choose a username"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-500">
         </div>
 
         <!-- Password -->
         <div>
             <label class="block mb-1 font-medium">Password</label>
-            <input type="password" placeholder="Enter your password"
+            <input name="password" type="password" placeholder="Enter your password"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-500">
         </div>
 
         <!-- Confirm Password -->
         <div>
             <label class="block mb-1 font-medium">Confirm Password</label>
-            <input type="password" placeholder="Confirm your password"
+            <input name="confirm_password" type="password" placeholder="Confirm your password"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-500">
         </div>
 
@@ -70,19 +70,19 @@
             <label class="block mb-2 font-medium">Hobbies</label>
             <div class="grid grid-cols-2 gap-3">
                 <label class="flex items-center gap-2">
-                    <input type="checkbox" value="reading" class="text-sky-400 focus:ring-skytext-sky-400">
+                    <input type="checkbox" name="hobbies[]" value="reading" class="text-sky-400 focus:ring-skytext-sky-400">
                     <span>Reading</span>
                 </label>
                 <label class="flex items-center gap-2">
-                    <input type="checkbox" value="sports" class="text-sky-400 focus:ring-skytext-sky-400">
+                    <input type="checkbox" name="hobbies[]" value="sports" class="text-sky-400 focus:ring-skytext-sky-400">
                     <span>Sports</span>
                 </label>
                 <label class="flex items-center gap-2">
-                    <input type="checkbox" value="music" class="text-sky-400 focus:ring-skytext-sky-400">
+                    <input type="checkbox" name="hobbies[]" value="music" class="text-sky-400 focus:ring-skytext-sky-400">
                     <span>Music</span>
                 </label>
                 <label class="flex items-center gap-2">
-                    <input type="checkbox" value="travel" class="text-sky-500 focus:ring-sky-500">
+                    <input type="checkbox" name="hobbies[]" value="travel" class="text-sky-500 focus:ring-sky-500">
                     <span>Travel</span>
                 </label>
             </div>
@@ -91,7 +91,7 @@
         <!-- Country -->
         <div>
             <label class="block mb-1 font-medium">Country</label>
-            <select
+            <select name="country"
                 class="w-full px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-sky-400">
                 <option value="">Select your country</option>
                 <option value="ph">Philippines</option>
@@ -108,8 +108,8 @@
         </button>
         <p>Already have an account? <a href="/login" class="text-sky-400 hover:underline">Login here</a></p>
     </form>
+    <?php dd($_POST) ?>
 </div>
 </div>
-
 
 <?php require('partials/footer.php') ?>

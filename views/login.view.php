@@ -14,7 +14,7 @@
     </div>
 
     <!-- Form -->
-    <form action="#" method="POST" class="flex flex-col gap-6">
+    <form action="/login" method="POST" class="flex flex-col gap-6">
         <div class="flex flex-col">
             <label for="username" class="mb-2 font-semibold">Username</label>
             <input type="text" id="username" name="username"
@@ -33,6 +33,7 @@
         </button>
         <p>Already have an account? <a href="/register" class="text-sky-400 hover:underline">Register here</a></p>
     </form>
+    <<?php dd($_POST) ?>
 </div>
 </div>
 

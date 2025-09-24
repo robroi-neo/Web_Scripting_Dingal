@@ -9,12 +9,9 @@ class Database
 
     public $connection;
 
-    public function __construct()
+    public function __construct(array $config = [], $username = 'root', $password = '')
     {
-        $dsn = 'mysql:host=localhost;port=3306;dbname=notes_mini_app_db;charset=utf8mb4';
-        $username = 'root';
-        $password = '';
-
+        $dsn = 'mysql:' . http_build_query($config, '', ';');
         $this->connection = new PDO($dsn, $username, $password);
     }
     public function query($query)
@@ -27,7 +24,3 @@ class Database
     }
 }
 
-$db = new Database();
-$db->query('SELECT * from users');
-
-dd($db->query('SELECT * from hobbies')->fetch(PDO::FETCH_ASSOC));

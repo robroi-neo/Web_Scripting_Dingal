@@ -15,4 +15,4 @@
 <body class="bg-black">
     <div
         class="bg-black text-white flex flex-col justify-center items-center gap-10 absolute-z-10
-    inset-0 min-h-screen w-full bg-[radial-gradient(circle,#73737350_1px,transparent_1px)] bg-[size:10px_10px] py-0 overflow-y-hidden">
+    inset-0 min-h-screen w-full bg-[radial-gradient(circle,#73737350_1px,transparent_1px)] bg-[size:10px_10px] overflow-y-hidden">
