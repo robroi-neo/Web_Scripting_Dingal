@@ -1,9 +1,5 @@
 <?php
 
-
-require('functions.php');
-
-
 class Database
 {
 
@@ -23,4 +19,3 @@ class Database
         return $statement;
     }
 }
-

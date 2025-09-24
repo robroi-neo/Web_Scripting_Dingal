@@ -19,12 +19,18 @@
             <label for="username" class="mb-2 font-semibold">Username</label>
             <input type="text" id="username" name="username"
                 class="px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <?php if (isset($error['username'])) : ?>
+                <p class="text-red-500 text-sm mt-1"><?php echo $error['username']; ?></p>
+            <?php endif; ?>
         </div>
 
         <div class="flex flex-col">
             <label for="password" class="mb-2 font-semibold">Password</label>
             <input type="password" id="password" name="password"
                 class="px-4 py-2 rounded-lg bg-zinc-800 border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <?php if (isset($error['password'])) : ?>
+                <p class="text-red-500 text-sm mt-1"><?php echo $error['password']; ?></p>
+            <?php endif; ?>
         </div>
 
         <button type="submit"
@@ -34,7 +40,7 @@
         <p>Already have an account? <a href="/register" class="text-sky-400 hover:underline">Register here</a></p>
     </form>
     <<?php dd($_POST) ?>
-</div>
+        </div>
 </div>
 
 <?php require('partials/footer.php') ?>
