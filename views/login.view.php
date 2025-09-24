@@ -39,8 +39,7 @@
         </button>
         <p>Already have an account? <a href="/register" class="text-sky-400 hover:underline">Register here</a></p>
     </form>
-    <<?php dd($_POST) ?>
-        </div>
+</div>
 </div>
 
 <?php require('partials/footer.php') ?>

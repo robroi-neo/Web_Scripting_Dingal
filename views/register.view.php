@@ -132,7 +132,6 @@
         </button>
         <p>Already have an account? <a href="/login" class="text-sky-400 hover:underline">Login here</a></p>
     </form>
-    <?php dd($_POST) ?>
 </div>
 </div>
 

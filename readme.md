@@ -5,5 +5,5 @@ Target Deadline: 09/24/2025
 
 Date Completed: 
 
-Target Accomplishments:
+Target Accomplishments
 Practice PHP in areas such as Authentication, Routers, and Database.
