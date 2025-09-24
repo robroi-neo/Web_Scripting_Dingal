@@ -2,7 +2,7 @@
 
 $heading = "Register";
 
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config);
 
 $allowedGenders = ['male', 'female', 'other'];
@@ -47,11 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($error)) {
         $_POST = [];
     }
-
-    
-
-
 }
 
 
-require('views/register.view.php');
+require view('register.view.php');

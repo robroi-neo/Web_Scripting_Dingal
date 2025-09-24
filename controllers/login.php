@@ -2,7 +2,7 @@
 
 $heading = "Login";
 
-$config = require 'config.php';
+$config = require base_path('config.php');
 $db = new Database($config);
 
 $error = [];
@@ -16,4 +16,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-require('views/login.view.php');
+require view('login.view.php');

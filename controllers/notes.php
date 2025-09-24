@@ -1,4 +1,4 @@
 <?php
 $heading = "Notes";
 
-require('views/notes.view.php');
+require view('notes.view.php');

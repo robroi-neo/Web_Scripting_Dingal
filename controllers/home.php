@@ -2,4 +2,4 @@
 
 $heading = "notes-mini-project";
 
-require "views/home.view.php";
+require view("home.view.php");
