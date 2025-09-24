@@ -1,22 +1,31 @@
-A notes mini project to learn php. Built using JS, CSS/Tailwind, AND HTML.
+# Notes Mini Project
 
-Date Started: 09/23/2025
-Target Deadline: 09/24/2025
+A simple notes project to learn PHP. Built using JavaScript, CSS/Tailwind, and HTML.
 
-Date Completed: 
-login/logout 24/09/2025 
-notes 
+---
 
-Target Accomplishments
-Practice PHP in areas such as Authentication, Routers, and Database.
+## Project Timeline
+- **Date Started:** 09/23/2025  
+- **Target Deadline:** 09/24/2025  
 
+### Completed
+- Login/Logout: 09/24/2025  
+- Notes: *in progress*  
 
-~~~ Remarks ~~~
-if using XAMPP;
+---
 
-create a virtual environment on httpd-vhosts.conf 
+## Target Accomplishments
+- Practice PHP in areas such as:
+  - Authentication
+  - Routers
+  - Database
 
-i.e.
+---
+
+## Remarks
+If using **XAMPP**, configure a virtual environment in `httpd-vhosts.conf`:
+
+```apache
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/notes-mini-project/public"
     ServerName notes-mini-project.local
@@ -27,11 +36,14 @@ i.e.
     </Directory>
 </VirtualHost>
 
-and in httpd.conf
+And update httpd.conf:
+
 DocumentRoot "C:/xampp/htdocs/notes-mini-project/public"
 <Directory "C:/xampp/htdocs/notes-mini-project/public">
     AllowOverride All
     Require all granted
 </Directory>
 
-dont code in php guys.
+Note
+
+Do not code in PHP.
