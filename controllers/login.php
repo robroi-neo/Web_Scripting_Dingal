@@ -1,5 +1,5 @@
 <?php
 
-$heading = "notes-mini-project-login";
+$heading = "Login";
 
 require('views/login.view.php');

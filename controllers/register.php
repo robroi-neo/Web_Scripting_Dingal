@@ -1,5 +1,5 @@
-<?php 
+<?php
 
-$heading = "notes-mini-project-register";
+$heading = "Register";
 
-require ('views/register.view.php');
+require('views/register.view.php');
