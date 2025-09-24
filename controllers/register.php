@@ -3,8 +3,7 @@
 
 $heading = "Register";
 
-$config = require base_path('config.php');
-$db = new Database($config);
+$db = new Database(base_path("notes_mini_app.sqlite"));
 
 $allowedGenders = ['male', 'female', 'other'];
 $allowedHobbies = ['reading', 'music', 'sports', 'travel'];

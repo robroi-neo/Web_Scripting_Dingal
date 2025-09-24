@@ -21,7 +21,6 @@ A simple notes project to learn PHP. Built using JavaScript, CSS/Tailwind, and H
   - Database
 
 ---
-
 ## Remarks
 If using **XAMPP**, configure a virtual environment in `httpd-vhosts.conf`:
 
@@ -43,7 +42,3 @@ DocumentRoot "C:/xampp/htdocs/notes-mini-project/public"
     AllowOverride All
     Require all granted
 </Directory>
-
-Note
-
-Do not code in PHP.

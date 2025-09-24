@@ -5,10 +5,21 @@ class Database
 
     public $connection;
 
-    public function __construct(array $config = [], $username = 'root', $password = '')
+    public function __construct()
     {
-        $dsn = 'mysql:' . http_build_query($config, '', ';');
-        $this->connection = new PDO($dsn, $username, $password);
+        try {
+            // SQLite DSN points to a file
+            $dbPath = dirname(__DIR__) . "/notes_mini_app.sqlite";
+            $dsn = "sqlite:" . $dbPath;
+
+            $this->connection = new PDO($dsn);
+            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // Enable foreign keys (SQLite requires this explicitly)
+            $this->connection->exec("PRAGMA foreign_keys = ON");
+        } catch (PDOException $e) {
+            die("❌ SQLite connection failed: " . $e->getMessage());
+        }
     }
 
     public function query($query, $params = [])

@@ -3,8 +3,7 @@ session_start();
 
 $heading = "Login";
 
-$config = require base_path('config.php');
-$db = new Database($config);
+$db = new Database(base_path("notes_mini_app.sqlite"));
 
 $error = [];
 
